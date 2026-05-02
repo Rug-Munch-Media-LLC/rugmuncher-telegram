@@ -1,0 +1,461 @@
+{
+  "version": "1.0",
+  "updated": "2026-05-02",
+  "channels": {
+    "cryptorugmuncher": {
+      "id": -1002056885429,
+      "name": "Crypto Rug Muncher",
+      "type": "main_brand",
+      "purpose": "Flagship channel - aggregated high-value content from all sources",
+      "post_frequency": "3-8/day",
+      "priority": "CRITICAL",
+      "content_types": {
+        "major_alerts": {
+          "description": "High-impact rug pulls, exploits, or market events",
+          "threshold": "risk_score >= 85 OR major news",
+          "sources": [
+            "MCP Router (all)",
+            "cryptopanic",
+            "whale_alert",
+            "lookonchain"
+          ],
+          "format": "alert_card",
+          "auto_post": true,
+          "priority": "IMMEDIATE"
+        },
+        "website_posts": {
+          "description": "Content published on RMI website",
+          "sources": [
+            "rmi-backend-api",
+            "web-cms"
+          ],
+          "format": "summary_card",
+          "auto_post": true,
+          "priority": "HIGH"
+        },
+        "twitter_highlights": {
+          "description": "Curated tweets from trusted sources",
+          "sources": [
+            "twitter_bridge",
+            "blockrun_twitter"
+          ],
+          "format": "quote_tweet",
+          "auto_post": true,
+          "priority": "MEDIUM"
+        },
+        "market_movements": {
+          "description": "Significant price action (>10% in 1h)",
+          "sources": [
+            "coingecko",
+            "birdeye",
+            "dexscreener"
+          ],
+          "format": "price_alert",
+          "auto_post": true,
+          "priority": "HIGH"
+        },
+        "project_updates": {
+          "description": "RMI feature releases, changes",
+          "sources": [
+            "rmi-backend-api",
+            "github"
+          ],
+          "format": "announcement",
+          "auto_post": true,
+          "priority": "MEDIUM"
+        }
+      },
+      "dedup_rules": {
+        "enabled": true,
+        "method": "content_hash",
+        "window": "24h",
+        "action": "delete_old_keep_newest"
+      }
+    },
+    "rmicryptonews": {
+      "id": -1003982391578,
+      "name": "Crypto Rug Munch News",
+      "type": "news_feed",
+      "purpose": "Breaking crypto news, market analysis, sentiment",
+      "post_frequency": "8-15/day",
+      "priority": "HIGH",
+      "content_types": {
+        "breaking_news": {
+          "description": "Major crypto news events",
+          "threshold": "cryptopanic votes > 50 OR major outlet",
+          "sources": [
+            "cryptopanic",
+            "coindesk_rss",
+            "cointelegraph_rss",
+            "decrypt_rss"
+          ],
+          "format": "news_card",
+          "auto_post": true,
+          "priority": "IMMEDIATE"
+        },
+        "market_analysis": {
+          "description": "Technical analysis, market trends",
+          "threshold": "fear_greed change > 10 OR BTC >5% move",
+          "sources": [
+            "coincap",
+            "cryptocompare",
+            "alternative.me"
+          ],
+          "format": "analysis_card",
+          "auto_post": true,
+          "priority": "HIGH"
+        },
+        "trending_tokens": {
+          "description": "Coins trending by volume/social",
+          "threshold": "top 10 by volume or social mentions",
+          "sources": [
+            "coingecko",
+            "coinmarketcap",
+            "birdeye_trending"
+          ],
+          "format": "trending_list",
+          "auto_post": true,
+          "priority": "MEDIUM"
+        },
+        "regulatory_news": {
+          "description": "Government, SEC, policy updates",
+          "threshold": "Any regulatory action",
+          "sources": [
+            "cryptopanic",
+            "coindesk_rss",
+            "theblock_rss"
+          ],
+          "format": "news_card",
+          "auto_post": true,
+          "priority": "HIGH"
+        },
+        "defi_updates": {
+          "description": "DeFi protocol news, TVL changes",
+          "threshold": "TVL change > 10% OR protocol exploit",
+          "sources": [
+            "defillama",
+            "dexpaprika",
+            "cryptoslate_rss"
+          ],
+          "format": "defi_card",
+          "auto_post": true,
+          "priority": "MEDIUM"
+        }
+      }
+    },
+    "rmialerts": {
+      "id": -1003818352164,
+      "name": "RugMunch Alerts",
+      "type": "alert_feed",
+      "purpose": "Real-time critical alerts - rugs, honeypots, exploits",
+      "post_frequency": "2-10/day",
+      "priority": "CRITICAL",
+      "content_types": {
+        "rug_pull_detected": {
+          "description": "Active or imminent rug pull",
+          "threshold": "risk_score >= 85 OR liquidity_removed",
+          "sources": [
+            "MCP Router scan",
+            "bot_scanner",
+            "dexscreener"
+          ],
+          "format": "urgent_alert",
+          "auto_post": true,
+          "priority": "IMMEDIATE"
+        },
+        "honeypot_confirmed": {
+          "description": "Confirmed honeypot contract",
+          "threshold": "sell_tax > 99% OR honeypot=True",
+          "sources": [
+            "bot_scanner",
+            "gmgn",
+            "moralis"
+          ],
+          "format": "trap_alert",
+          "auto_post": true,
+          "priority": "IMMEDIATE"
+        },
+        "exploit_detected": {
+          "description": "Active exploit or hack",
+          "threshold": "cryptopanic votes > 30 OR loss > $1M",
+          "sources": [
+            "cryptopanic",
+            "blockchair",
+            "whale_alert"
+          ],
+          "format": "exploit_alert",
+          "auto_post": true,
+          "priority": "IMMEDIATE"
+        },
+        "scam_contract": {
+          "description": "Confirmed scam or malicious contract",
+          "threshold": "blacklisted_dev OR serial_rugger",
+          "sources": [
+            "bot_scanner",
+            "arkham",
+            "nansen_labels"
+          ],
+          "format": "scam_alert",
+          "auto_post": true,
+          "priority": "HIGH"
+        },
+        "lp_drain_alert": {
+          "description": "Sudden liquidity removal",
+          "threshold": "LP removed > 50% in 1h",
+          "sources": [
+            "dexscreener",
+            "dexpaprika",
+            "raydium"
+          ],
+          "format": "liquidity_alert",
+          "auto_post": true,
+          "priority": "HIGH"
+        }
+      }
+    },
+    "rmialpha": {
+      "id": -1003762675055,
+      "name": "RugMunch Alpha",
+      "type": "premium_feed",
+      "purpose": "Exclusive alpha signals - whales, smart money, insider activity",
+      "post_frequency": "3-12/day",
+      "priority": "CRITICAL",
+      "content_types": {
+        "whale_movement": {
+          "description": "Large wallet movements (> $100k)",
+          "threshold": "transaction > $100k OR whale_alert trigger",
+          "sources": [
+            "whale_alert",
+            "lookonchain",
+            "spotonchain",
+            "arkham",
+            "nansen"
+          ],
+          "format": "whale_card",
+          "auto_post": true,
+          "priority": "HIGH"
+        },
+        "smart_money_signal": {
+          "description": "Smart money buying pattern detected",
+          "threshold": "cryptoiz signal OR gmgn smart_money flow",
+          "sources": [
+            "cryptoiz",
+            "gmgn",
+            "nansen",
+            "dune"
+          ],
+          "format": "alpha_card",
+          "auto_post": true,
+          "priority": "HIGH"
+        },
+        "insider_accumulation": {
+          "description": "Insider wallets accumulating before pump",
+          "threshold": "cryptoiz accumulation window",
+          "sources": [
+            "cryptoiz",
+            "gmgn",
+            "moralis",
+            "helius"
+          ],
+          "format": "accumulation_card",
+          "auto_post": true,
+          "priority": "HIGH"
+        },
+        "early_gem": {
+          "description": "High-score token before trend",
+          "threshold": "risk_score <= 20 AND volume_spike > 5x",
+          "sources": [
+            "bot_scanner",
+            "birdeye",
+            "dexscreener"
+          ],
+          "format": "gem_card",
+          "auto_post": true,
+          "priority": "HIGH"
+        },
+        "deployer_blacklist": {
+          "description": "Known rugging deployer detected",
+          "threshold": "deployer in blacklist OR arkham entity flagged",
+          "sources": [
+            "arkham",
+            "nansen_labels",
+            "bot_scanner"
+          ],
+          "format": "blacklist_alert",
+          "auto_post": true,
+          "priority": "HIGH"
+        },
+        "pre_rug_warning": {
+          "description": "Signals suggesting potential rug pull",
+          "threshold": "liquidity_unlocking AND dev_wallet_selling",
+          "sources": [
+            "cryptoiz",
+            "gmgn",
+            "arkham",
+            "bot_scanner"
+          ],
+          "format": "warning_card",
+          "auto_post": true,
+          "priority": "IMMEDIATE"
+        },
+        "deep_contract_scan": {
+          "description": "Premium deep analysis results",
+          "threshold": "full_scan_complete AND high_value_token",
+          "sources": [
+            "MCP Router",
+            "bot_scanner",
+            "all_apis"
+          ],
+          "format": "dossier_card",
+          "auto_post": true,
+          "priority": "MEDIUM"
+        }
+      }
+    },
+    "rmiscans": {
+      "id": -1003937506770,
+      "name": "RugMunch Scans",
+      "type": "scan_feed",
+      "purpose": "Community scan activity - tokens being analyzed",
+      "post_frequency": "10-30/day",
+      "priority": "MEDIUM",
+      "content_types": {
+        "user_scan": {
+          "description": "Scan performed by user via bot",
+          "threshold": "any_scan",
+          "sources": [
+            "bot_scanner",
+            "telegram_bot"
+          ],
+          "format": "scan_card",
+          "auto_post": true,
+          "priority": "LOW"
+        },
+        "trending_scans": {
+          "description": "Most scanned tokens in last hour",
+          "threshold": "scan_count > 5 in 1h",
+          "sources": [
+            "bot_scanner",
+            "redis"
+          ],
+          "format": "trending_card",
+          "auto_post": true,
+          "priority": "MEDIUM"
+        },
+        "launch_radar": {
+          "description": "New token launches detected",
+          "threshold": "new_pair OR pumpfun_launch",
+          "sources": [
+            "pumpfun",
+            "dexscreener",
+            "dexpaprika"
+          ],
+          "format": "launch_card",
+          "auto_post": true,
+          "priority": "MEDIUM"
+        },
+        "scan_digest": {
+          "description": "Hourly digest of all scans",
+          "threshold": "every 1 hour",
+          "sources": [
+            "bot_scanner",
+            "redis"
+          ],
+          "format": "digest_card",
+          "auto_post": true,
+          "priority": "LOW"
+        }
+      }
+    },
+    "rmiupdates": {
+      "id": -1003872387867,
+      "name": "RugMunch Updates",
+      "type": "project_feed",
+      "purpose": "RMI project updates, changelogs, announcements",
+      "post_frequency": "1-3/week",
+      "priority": "LOW",
+      "content_types": {
+        "feature_release": {
+          "description": "New feature or capability",
+          "threshold": "any_new_feature",
+          "sources": [
+            "github",
+            "rmi-backend-api"
+          ],
+          "format": "announcement",
+          "auto_post": false,
+          "priority": "HIGH"
+        },
+        "system_status": {
+          "description": "System health, uptime, incidents",
+          "threshold": "status_change OR incident",
+          "sources": [
+            "rmi-backend-api",
+            "health_checks"
+          ],
+          "format": "status_update",
+          "auto_post": true,
+          "priority": "HIGH"
+        },
+        "milestone": {
+          "description": "User milestones, achievements",
+          "threshold": "scans > threshold OR users > threshold",
+          "sources": [
+            "rmi-backend-api",
+            "database"
+          ],
+          "format": "milestone_card",
+          "auto_post": true,
+          "priority": "MEDIUM"
+        },
+        "partnership": {
+          "description": "Partnerships, integrations",
+          "threshold": "new_partnership",
+          "sources": [
+            "rmi-backend-api"
+          ],
+          "format": "partnership_card",
+          "auto_post": false,
+          "priority": "HIGH"
+        }
+      }
+    }
+  },
+  "global_rules": {
+    "quality_standards": {
+      "minimum_sources": 2,
+      "confidence_threshold": 0.7,
+      "max_age_minutes": 30,
+      "dedup_window_hours": 24,
+      "language": "English"
+    },
+    "posting_rules": {
+      "no_spam": "Max 3 posts in 10 minutes per channel",
+      "no_duplicates": "Same content hash = delete old, keep new",
+      "source_attribution": "Always cite primary source internally",
+      "formatting": "Use emoji headers, clear sections, call-to-action",
+      "timing": "Peak hours 8am-10pm UTC, off-hours only for CRITICAL"
+    },
+    "priority_routing": {
+      "CRITICAL": [
+        "cryptorugmuncher",
+        "rmialerts",
+        "rmialpha"
+      ],
+      "HIGH": [
+        "cryptorugmuncher",
+        "rmialpha",
+        "rmicryptonews"
+      ],
+      "MEDIUM": [
+        "rmicryptonews",
+        "rmiscans",
+        "cryptorugmuncher"
+      ],
+      "LOW": [
+        "rmiupdates",
+        "rmiscans"
+      ]
+    }
+  }
+}

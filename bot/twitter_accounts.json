@@ -1,0 +1,436 @@
+{
+  "whale_trackers": {
+    "description": "Accounts tracking large wallet movements and smart money",
+    "priority": "CRITICAL",
+    "post_to": [
+      "crypto_alpha",
+      "main_channel"
+    ],
+    "accounts": [
+      {
+        "handle": "WhaleStats",
+        "name": "Whale Stats",
+        "description": "Real-time whale tracking, large transactions"
+      },
+      {
+        "handle": "whale_alert",
+        "name": "Whale Alert",
+        "description": "Large cryptocurrency transactions"
+      },
+      {
+        "handle": "Lookonchain",
+        "name": "Lookonchain",
+        "description": "On-chain analysis, smart money tracking"
+      },
+      {
+        "handle": "spotonchain",
+        "name": "SpotOnChain",
+        "description": "AI-powered on-chain intelligence"
+      },
+      {
+        "handle": "ai_9527",
+        "name": "AI 9527",
+        "description": "Smart money flow analysis"
+      },
+      {
+        "handle": "ai_9528",
+        "name": "AI 9528",
+        "description": "Wallet tracking signals"
+      },
+      {
+        "handle": "OnchainLens",
+        "name": "Onchain Lens",
+        "description": "On-chain data insights"
+      },
+      {
+        "handle": "ZachXBT",
+        "name": "ZachXBT",
+        "description": "On-chain investigator, scam tracking"
+      },
+      {
+        "handle": "blknoiz06",
+        "name": "blknoiz06",
+        "description": "On-chain sleuth, MEV tracking"
+      },
+      {
+        "handle": "Nansen_ai",
+        "name": "Nansen",
+        "description": "On-chain analytics platform"
+      },
+      {
+        "handle": "ArkhamIntel",
+        "name": "Arkham Intelligence",
+        "description": "Blockchain intelligence platform"
+      },
+      {
+        "handle": "cryptoiz_0",
+        "name": "CryptoIZ",
+        "description": "Whale alpha signals"
+      }
+    ]
+  },
+  "breaking_news": {
+    "description": "First-to-report crypto news and events",
+    "priority": "CRITICAL",
+    "post_to": [
+      "rmi_news",
+      "main_channel"
+    ],
+    "accounts": [
+      {
+        "handle": "DB",
+        "name": "DB",
+        "description": "First to report major crypto news"
+      },
+      {
+        "handle": "WatcherGuru",
+        "name": "Watcher Guru",
+        "description": "Crypto news and updates"
+      },
+      {
+        "handle": "Tree_of_Alpha",
+        "name": "Tree of Alpha",
+        "description": "Fastest crypto news terminal"
+      },
+      {
+        "handle": "Cointelegraph",
+        "name": "Cointelegraph",
+        "description": "Major crypto news outlet"
+      },
+      {
+        "handle": "coindesk",
+        "name": "CoinDesk",
+        "description": "Major crypto news outlet"
+      },
+      {
+        "handle": "TheBlock__",
+        "name": "The Block",
+        "description": "Crypto research and news"
+      },
+      {
+        "handle": "CryptoHayes",
+        "name": "Crypto Hayes",
+        "description": "Crypto market news"
+      },
+      {
+        "handle": "Pento",
+        "name": "Pento",
+        "description": "Crypto news and analysis"
+      },
+      {
+        "handle": "Crypto Rover",
+        "name": "Crypto Rover",
+        "description": "Crypto news aggregator"
+      },
+      {
+        "handle": "Crypto_Birb",
+        "name": "Crypto Birb",
+        "description": "Crypto news and analysis"
+      }
+    ]
+  },
+  "alpha_hunters": {
+    "description": "Accounts finding early gems and alpha signals",
+    "priority": "HIGH",
+    "post_to": [
+      "crypto_alpha"
+    ],
+    "accounts": [
+      {
+        "handle": "Pentosh1",
+        "name": "Pentoshi",
+        "description": "Early alpha calls, market analysis"
+      },
+      {
+        "handle": "CryptoCred",
+        "name": "Crypto Cred",
+        "description": "Technical analysis, early calls"
+      },
+      {
+        "handle": "GCRClassic",
+        "name": "GCR",
+        "description": "Legendary alpha hunter"
+      },
+      {
+        "handle": "HsakaTrades",
+        "name": "Hsaka",
+        "description": "High-signal trading calls"
+      },
+      {
+        "handle": "Bluntz_Capital",
+        "name": "Bluntz Capital",
+        "description": "Early altcoin calls"
+      },
+      {
+        "handle": "DeFi_Mochi",
+        "name": "DeFi Mochi",
+        "description": "DeFi alpha and early gems"
+      },
+      {
+        "handle": "CryptoMessiah",
+        "name": "Crypto Messiah",
+        "description": "Early token calls"
+      },
+      {
+        "handle": "Miles Deutscher",
+        "name": "Miles Deutscher",
+        "description": "Altcoin alpha, narratives"
+      },
+      {
+        "handle": "AltcoinGordon",
+        "name": "Altcoin Gordon",
+        "description": "Early altcoin research"
+      },
+      {
+        "handle": "TheDeFinvestor",
+        "name": "The DeFi Investor",
+        "description": "DeFi alpha and early calls"
+      }
+    ]
+  },
+  "technical_analysts": {
+    "description": "High-signal technical analysis and market calls",
+    "priority": "HIGH",
+    "post_to": [
+      "rmi_news",
+      "crypto_alpha"
+    ],
+    "accounts": [
+      {
+        "handle": "TheRealFlyfish",
+        "name": "The Real Flyfish",
+        "description": "High-signal TA and market calls"
+      },
+      {
+        "handle": "RektCapital",
+        "name": "Rekt Capital",
+        "description": "Market cycle analysis"
+      },
+      {
+        "handle": "CryptoCapo_",
+        "name": "Crypto Capo",
+        "description": "Technical analysis"
+      },
+      {
+        "handle": "Pentosh1",
+        "name": "Pentoshi",
+        "description": "Market analysis and calls"
+      },
+      {
+        "handle": "Il Capo Of Crypto",
+        "name": "Il Capo",
+        "description": "Market cycle analysis"
+      },
+      {
+        "handle": "CredibleCrypto",
+        "name": "Credible Crypto",
+        "description": "Market analysis and calls"
+      },
+      {
+        "handle": "TraderXO_",
+        "name": "Trader XO",
+        "description": "Technical analysis"
+      },
+      {
+        "handle": "MMTCN",
+        "name": "MMTCN",
+        "description": "Market analysis"
+      }
+    ]
+  },
+  "narrative_scouts": {
+    "description": "Accounts identifying emerging crypto narratives early",
+    "priority": "HIGH",
+    "post_to": [
+      "crypto_alpha",
+      "rmi_news"
+    ],
+    "accounts": [
+      {
+        "handle": "EvanDeCaires",
+        "name": "Evan DeCaires",
+        "description": "Narrative identification"
+      },
+      {
+        "handle": "sassal0x",
+        "name": "sassal0x",
+        "description": "Ethereum ecosystem analysis"
+      },
+      {
+        "handle": "0xMert_",
+        "name": "Mert",
+        "description": "Solana ecosystem, early calls"
+      },
+      {
+        "handle": "DefiIgnas",
+        "name": "DeFi Ignas",
+        "description": "DeFi narrative analysis"
+      },
+      {
+        "handle": "Defi0xJeff",
+        "name": "DeFi Jeff",
+        "description": "DeFi research and narratives"
+      },
+      {
+        "handle": "Research_0x",
+        "name": "Research 0x",
+        "description": "Crypto research and narratives"
+      },
+      {
+        "handle": "0xBertDeFi",
+        "name": "0xBert",
+        "description": "DeFi narrative tracking"
+      },
+      {
+        "handle": "0xKasper",
+        "name": "0xKasper",
+        "description": "Crypto narratives and trends"
+      }
+    ]
+  },
+  "security_watchers": {
+    "description": "Accounts tracking exploits, scams, and security issues",
+    "priority": "CRITICAL",
+    "post_to": [
+      "crypto_alerts",
+      "main_channel"
+    ],
+    "accounts": [
+      {
+        "handle": "ZachXBT",
+        "name": "ZachXBT",
+        "description": "Scam tracking and investigations"
+      },
+      {
+        "handle": "SlowMist_Team",
+        "name": "SlowMist",
+        "description": "Blockchain security firm"
+      },
+      {
+        "handle": "CertiKAlert",
+        "name": "CertiK Alert",
+        "description": "Security alerts and audits"
+      },
+      {
+        "handle": "PeckShieldAlert",
+        "name": "PeckShield",
+        "description": "Security alerts and analysis"
+      },
+      {
+        "handle": "BlockSecTeam",
+        "name": "BlockSec",
+        "description": "Blockchain security research"
+      },
+      {
+        "handle": "MegaIvan0",
+        "name": "Mega Ivan",
+        "description": "Exploit tracking"
+      },
+      {
+        "handle": "CryptoSecNews",
+        "name": "Crypto Security News",
+        "description": "Security incidents and alerts"
+      },
+      {
+        "handle": "ScamSniffer",
+        "name": "Scam Sniffer",
+        "description": "Scam detection and alerts"
+      }
+    ]
+  },
+  "meme_degen": {
+    "description": "Meme coin and degen trading accounts",
+    "priority": "MEDIUM",
+    "post_to": [
+      "rmiscans",
+      "crypto_alpha"
+    ],
+    "accounts": [
+      {
+        "handle": "AnonymOus_eth",
+        "name": "AnonymOus",
+        "description": "Meme coin alpha"
+      },
+      {
+        "handle": "PumpDotFun",
+        "name": "Pump.fun",
+        "description": "Official pump.fun updates"
+      },
+      {
+        "handle": "GMGN_AI",
+        "name": "GMGN AI",
+        "description": "Trading signals and alpha"
+      },
+      {
+        "handle": "Maartunn",
+        "name": "Maartunn",
+        "description": "Meme coin early calls"
+      },
+      {
+        "handle": "CryptoMichNL",
+        "name": "Crypto Mich",
+        "description": "Meme coin analysis"
+      },
+      {
+        "handle": "0xSunNFT",
+        "name": "0xSun",
+        "description": "Meme coin tracking"
+      },
+      {
+        "handle": "0xBoxerCrypto",
+        "name": "0xBoxer",
+        "description": "Degen trading and calls"
+      },
+      {
+        "handle": "CryptoDonAlt",
+        "name": "Crypto Don Alt",
+        "description": "Altcoin and meme calls"
+      }
+    ]
+  },
+  "dev_builders": {
+    "description": "Developers and builders sharing technical insights",
+    "priority": "MEDIUM",
+    "post_to": [
+      "rmi_news",
+      "rmi_updates"
+    ],
+    "accounts": [
+      {
+        "handle": "VitalikButerin",
+        "name": "Vitalik",
+        "description": "Ethereum founder"
+      },
+      {
+        "handle": "aeyakovenko",
+        "name": "Anatoly Yakovenko",
+        "description": "Solana founder"
+      },
+      {
+        "handle": "balajis",
+        "name": "Balaji",
+        "description": "Tech and crypto thought leader"
+      },
+      {
+        "handle": "cdixon",
+        "name": "Chris Dixon",
+        "description": "a16z crypto"
+      },
+      {
+        "handle": "punk6529",
+        "name": "6529",
+        "description": "NFT and open metaverse"
+      },
+      {
+        "handle": "santimentnet",
+        "name": "Santiment",
+        "description": "On-chain analytics"
+      },
+      {
+        "handle": "defillama",
+        "name": "DeFi Llama",
+        "description": "DeFi data platform"
+      }
+    ]
+  }
+}
